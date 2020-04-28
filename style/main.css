@@ -57,7 +57,8 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 10px 45px 10px;
+    background: rgb(235, 235, 235);
+    padding: 10px 45px 10px;
 }
 .phone {
     display: inline-block;
@@ -136,7 +137,8 @@ button:active {
     text-align: center;
     font-size: 2.5em;
     line-height: 1.3em;
-    margin: 3em 0;
+    padding: 2em 0;
+    text-shadow: rgba(0, 0, 0, 0.3) 5px 5px 10px;
 }
 .cards {
     display: flex;
@@ -148,7 +150,7 @@ button:active {
 }
 .card {
     background: rgb(235, 235, 235);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     border-radius: 7px;
     overflow: hidden;
     margin-bottom: 30px;
@@ -193,6 +195,7 @@ button:active {
     border-radius: 5px;
     margin: auto;
     padding: 40px 40px;
+    box-shadow: #000 5px 5px 100px;
 }
 .modal-header {
     display: flex;
@@ -230,38 +233,34 @@ button:active {
 }
 .delivery {
     display: flex;
-    justify-content: flex-end;
-    background: url(../img/deliveryBG.png) no-repeat center;
+    justify-content: space-around;
     background-color: rgb(201, 201, 201);
-    min-height: 900px;
-    margin-bottom: 3em;
+    padding: 3em 0;
 }
-.delivery-box {
+.delivery-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 49%;
+}
+.delivery-image img {
+    width: 50%;
+    height: auto;
+}
+.delivery-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 49%;
     align-items: center;
-    margin-right: 10%;
 }
 .delivery-text h2 {
     font-size: 2em;
     font-weight: bold;
     color: #2D0C57;
 }
-.delivery-icon {
-    padding: 5em;
-}
-.delivery-icon img {
-    width: 10em;
-}
 .button-delivery {
     font-size: 1.5em;
-}
-.review-page-text {
-    font-size: 2.5em;
-    line-height: 1.2em;
-    text-align: center;
-    margin-bottom: 1em;
 }
 .review-cards {
     display: flex;
@@ -284,14 +283,9 @@ button:active {
     margin-top: 1.5em;
     font-weight: 700;
 }
-.contact-head {
-    font-size: 2.5em;
-    line-height: 1.2em;
-    text-align: center;
-}
 .contact-page {
     background-color: rgb(201, 201, 201);
-    padding: 3em 0;
+    padding: 2em 0;
 }
 .contact-box {
     display: flex;
@@ -306,7 +300,8 @@ button:active {
     width: 49%;
 }
 .image-box img {
-    width: 30em;
+    max-width:100%;
+    height:auto;
 }
 input {
     background: none;
@@ -314,7 +309,7 @@ input {
 .input-text {
     border-bottom: 2px solid #333;
     padding-top: 1em;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
 }
 textarea {
     resize: none;
@@ -324,4 +319,54 @@ textarea {
 }
 .submit {
     text-align: center;
+}
+
+/*about section*/
+.about-box {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2em;
+}
+.about-box div {
+    padding: 0 2em;
+}
+.image-about {
+    display: flex;
+    align-items: center;
+    width: 49%;
+}
+.image-about img {
+    max-width:100%;
+    height:auto;
+}
+.text-about {
+    display: block;
+    font-size: 0.8em;
+    text-indent: 2em;
+    line-height: 2em;
+    text-align: justify;
+    width: 49%;
+}
+.text-about li {
+    list-style: square;
+}
+
+/*footer section*/
+footer {
+    background-color: rgb(201, 201, 201);
+    padding: 1em 0;
+}
+.footer-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 45px 10px;
+}
+.social-links {
+    display: flex;
+    align-items: center;
+}
+.social-link:not(:first-child) {
+    margin-left: 2em;
 }
