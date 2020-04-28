@@ -388,13 +388,13 @@
                     </div>
                     <div class="contact-box">
                         <div class="form-box">
-                            <form action="php/contact.php" method="POST">
+                            <form action="send.php" method="POST">
                                 Ваше имя<br>
-                                <input type="text" name="visitor_name" class="input-text" placeholder="введите имя" pattern=[А-Я\sа-я]{3,20} required><br>
+                                <input type="text" name="name" class="input-text" placeholder="введите имя" pattern=[А-Я\sа-я]{3,20} required><br>
                                 Ваш e-mail<br>
-                                <input type="text" name="visitor_email" class="input-text" placeholder="введите e-mail" required><br>
+                                <input type="text" name="email" class="input-text" placeholder="введите e-mail" required><br>
                                 Текст<br>
-                                <textarea name="visitor_message" id="" placeholder="введите текст" required></textarea><br>
+                                <textarea name="text" id="" placeholder="введите текст" required></textarea><br>
                                 <div class="submit">
                                     <button type="submit">Отправить</button>
                                 </div>
@@ -408,8 +408,7 @@
                 </div>
                 <!-- /.contact-page -->
             </div>
-            <script src="js/wow.min.js"></script>
-            <script src="js/main.js"></script>
-           
         </body>
     </html>
+    <script src="js/jquery-3.4.0.min.js"></script>
+    <script src="js/mail.js"></script>
