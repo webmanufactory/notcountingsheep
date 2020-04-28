@@ -388,7 +388,7 @@
                     </div>
                     <div class="contact-box">
                         <div class="form-box">
-                            <form action="send.php" method="POST">
+                            <form enctype="multipart/form-data" method="post" id="form">
                                 Ваше имя<br>
                                 <input type="text" name="name" class="input-text" placeholder="введите имя" pattern=[А-Я\sа-я]{3,20} required><br>
                                 Ваш e-mail<br>
@@ -410,5 +410,7 @@
             </div>
         </body>
     </html>
+    <script src="js/wow.min.js"></script>
     <script src="js/jquery-3.4.0.min.js"></script>
     <script src="js/mail.js"></script>
+    <script src="js/main.js"></script>
