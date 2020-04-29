@@ -505,6 +505,9 @@ footer {
     .section_text {
         padding: 5px 15px 5px;
     }
+    .main_page {
+        padding: 120px 10px 135px 30px;
+    }
     .title {
         padding: 1em 0;
     }
