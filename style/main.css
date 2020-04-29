@@ -64,13 +64,42 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     display: inline-block;
     text-align: end;
 }
-.phone p {
+.phone p a {
     color: #2D0C57;
     font-family: 'Pacifico', cursive;
     font-size: 2em;
 }
-.menu {
+.phone a:visited {
+    color: #2D0C57;
+}
+.menu-box {
+
+    background-color: #000;
+}
+.menu-page {
     display: flex;
+    height: 3em;
+    align-items: center;
+}
+.menu-page ul {
+    display: flex;
+    justify-content: space-around;
+    width: 65%;
+    margin: 0 auto;
+}
+.menu-page a {
+    color: #fff;
+}
+.menu-page a:hover {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #fff;
+    border-color: #333;
+    transition: 1s border-color;
+}
+/* menu
+
+.menu {
+    display: none;
     background-color: #000;
     height: 3em;
     align-items: center;
@@ -89,7 +118,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     border-bottom: 2px solid #fff;
     border-color: #333;
     transition: 1s border-color;
-}
+} */
 .main_page {
     background: url(../img/mainBG.png) no-repeat, center, rgba(0, 0, 0, .6);
     background-blend-mode: darken;
@@ -207,7 +236,14 @@ button:active {
     justify-content: space-between;
 }
 .modal-image {
-    width: 20em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 49%;
+}
+.modal-image img {
+    width: 100%;
+    height: auto;
 }
 .modal-text h2 {
     font-size: 1.5em;
@@ -217,6 +253,10 @@ button:active {
     margin: auto 15px;
     line-height: 1.4em;
     text-indent: 2em;
+    width: 49%;
+}
+.modal-text-delivery {
+    width: 100%;
 }
 .close {
     font-size: 36px;
@@ -289,6 +329,7 @@ button:active {
 }
 .contact-box {
     display: flex;
+    justify-content: space-around;
 }
 .form-box {
     display: flex;
@@ -308,14 +349,18 @@ input {
 }
 .input-text {
     border-bottom: 2px solid #333;
+    border-radius: 0;
     padding-top: 1em;
     margin-bottom: 2em;
+    box-shadow: none;
 }
 textarea {
     resize: none;
     border: 2px solid #333;
+    border-radius: 0;
     background: none;
     margin-top: 1em;
+    box-shadow: none;
 }
 .submit {
     text-align: center;
@@ -369,4 +414,178 @@ footer {
 }
 .social-link:not(:first-child) {
     margin-left: 2em;
+}
+@media (max-width: 1920px) {
+    .wrap {
+        max-width: 1440px;
+    }
+    .main_page {
+        background: url(../img/mainBG.png) repeat-x center rgba(0, 0, 0, .6);
+    }
+    .cards {
+        max-width: inherit;
+    }
+}
+@media (max-width: 1440px) {
+    .cards {
+        max-width: 1000px;
+    }
+    
+}
+@media (max-width: 1366px) {
+    .form-box {
+        width: auto;
+    }
+}
+@media (max-width: 992px) {
+    .cards {
+        max-width: 800px;
+    }
+    .delivery-text h2 {
+        font-size: 1.5em;
+    }
+    .review-text {
+        text-indent: 1em;
+        line-height: 1em;
+    }
+    .review-cards p {
+        font-size: 0.8em;
+    }
+    .image-box {
+        width: 30%;
+        padding-top: 3em;
+    }
+    .text-about {
+        text-indent: 1.2em;
+        line-height: 1.5em;
+}
+@media (max-width: 768px) {
+    .wrap {
+        font-size: 12px;
+    }
+    .cards {
+        max-width: 600px;
+    }
+    .card-text h3 {
+        font-size: 1em;
+    }
+}
+@media (max-width: 578px) {
+    .main_page {
+        max-width: 575px;
+    }
+    .main_page-text {
+        font-size: 2em;
+    }
+    .menu-page ul {
+        width: auto;
+    }
+    .menu-page a:hover {
+        padding-bottom: 5px;
+    }
+    ul li:not(:last-child) {
+           margin-right: 10px;
+    }
+    .cards {
+        max-width: 550px;
+    }
+    .modal-text p {
+        font-size: 0.8em;
+    }
+    .review-text {
+        padding: 1em;
+        text-align: left;
+    }
+    .review-text h4 {
+        font-size: 1em;
+        text-align: left;
+    }
+}
+@media (max-width: 480px) {
+    .section_text {
+        padding: 5px 15px 5px;
+    }
+    .title {
+        padding: 1em 0;
+    }
+    .cards {
+        max-width: 350px;
+    }
+    .card {
+        flex-basis: 40%;
+    }
+    .modal-image {
+        display: none;
+    }
+    .modal-text {
+        width: 100%;
+    }
+    .delivery-text {
+        width: auto;
+    }
+    .delivery-image {
+        display: none;
+    }
+    .image-box {
+        display: none;
+    }
+    .image-about {
+        display: none;
+    }
+    .text-about {
+        width: 80%;
+    }
+    .review-cards {
+        flex-direction: column;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    .review-card {
+        display: flex;
+        align-items: center;
+    }
+    .review-card img {
+        width: 10%;
+    }
+    .review-text h4 {
+        font-size: 1em;
+        text-align: left;
+        margin-top: 1em;
+        text-indent: 0;
+    }
+    .menu-page ul {
+        font-size: 0.8em;
+    }
+    /* .menu-page {
+        display: none;
+    }
+    .menu ul {
+        width: auto;
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 2em 0;
+    }
+    ul.submenu {
+        display: none;
+    }
+    ul.menu > li:hover > ul.submenu {
+          display: flex;
+          flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+    } */
+}
+@media only screen and (max-height: 827px) {
+    .modal-card {
+        max-height: 300px;
+        overflow: scroll;
+    }
+    .card-text h3 {
+        font-size: 1em;
+    }
 }
